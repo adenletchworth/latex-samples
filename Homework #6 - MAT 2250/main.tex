@@ -1,0 +1,220 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[paper=letterpaper,margin=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{newtxtext, newtxmath}
+\usepackage{enumitem}
+\usepackage{titling}
+\usepackage[colorlinks=true]{hyperref}
+
+\title{Homework \#6 - MAT 2250}
+\author{Aden Letchworth}
+\date{Due: December 1, 2022}
+
+\begin{document}
+
+\maketitle
+
+\section*{Chapter 1.1}
+    \begin{gather}\tag{\textbf{5}}
+    \left[1+\left(\frac{dy}{dx}\right)^2\right] = C 
+    \end{gather}
+    \begin{center}
+        This is an ordinary differential equation or ODE because there aren't partial derivatives with respect to more than one independent variable. The order is first-order because that is the highest-order derivative present. The equation is non-linear because of the quadratic present. The independent variables are \{dx\} and the dependent are \{dy\}.
+    \end{center}
+\section*{Chapter 1.2} 
+    \begin{gather*}\tag{\textbf{4}}
+        x = 2cos(t)-3sin(t) ,\hspace{.2cm}x'' + x = 0 \\ \\
+            x' = -2sin(t)-3cos(t) \\
+            x'' = -2cos(t)+3sin(t)\\
+            (-2cos(t)+3sin(t)) + (2cos(t)-3sin(t)) = 0\\
+            (2cos(t)-2cos(t)) + (3sin(t)-3sin(t)) = 0\\
+            0 + 0 = 0
+    \end{gather*}
+    \begin{center}
+    So, x = 2cos(t)-3sin(t) is a solution to the initial value problem
+    \end{center}
+    \begin{gather*}\tag{\textbf{10}}
+        y-ln(y)=x^2-1, \hspace{.2cm} \frac{dy}{dx} = \frac{2xy}{y-1} \\\\
+        \frac{d}{dx}[y] - \frac{d}{dx}[ln(y)] = \frac{d}{dx}[x^2] - \frac{d}{dx}[-1]\\
+        \frac{dy}{dx} - \frac{1}{y} \times \frac{dy}{dx} = 2x\\
+        \frac{dy}{dx} (1-\frac{1}{y}) = 2x\\
+        y(\frac{dy}{dx} (1-\frac{1}{y})) = y(2x)\\
+        \frac{dy}{dx}(y-1) = 2xy\\
+        \frac{\frac{dy}{dx}(y-1)}{y-1} = \frac{2xy}{y-1}\\
+        \frac{dy}{dx} = \frac{2xy}{y-1}\\
+    \end{gather*}
+    \begin{center}
+        So, $y-ln(y)=x^2-1$ is a solution to our equation
+    \end{center}
+    \begin{gather*}\tag{\textbf{26}}
+        \frac{dx}{dt} + cos(x) = sin(t),\hspace{.5cm}x(\pi)=0\\\\
+        \frac{dx}{dt} = sin(t)-cos(x)\\
+        f(t,x) = sin(t)-cos(x)\\
+        \frac{\partial f}{\partial x} = sin(x)
+    \end{gather*}
+    \begin{center}
+        By the existence and uniqueness theorom we know f(t,x) is continuous given the initial values $x(\pi)=0$
+    \end{center}
+\section*{Chapter 2.2}
+    \begin{gather*}\tag{\textbf{8}}
+        \frac{dx}{dt}=3xt^2\\\\
+        dx[p(x)] = dt[g(t)]\\
+        \int\frac{1}{3x}dx=\int t^2dt\\
+        \frac{1}{3}\ln(x) = \frac{t^3}{3}+C\\
+        \ln|x| = t^3 + 3C\\
+        \ln|x| = t^3 + K\\
+        x = e^{t^3+K}
+    \end{gather*}
+    \begin{gather*}\tag{\textbf{22}}
+        x^2dx+2ydy=0,\hspace{.5cm} y(0) = 2\\\\
+        x^2dx = -2ydy\\
+        \int x^2dx = \int =2ydy\\
+        \frac{x^3}{3} = -y^2 + C\\
+        \frac{(0)^3}{3} = -(2)^2 + C\\
+        C = 4\\
+        \frac{x^3}{3} = -y^2 + 4\\
+        y = \sqrt{\frac{-x^3}{3}+4}\\\\\\\\\\\\\\\\
+    \end{gather*}
+    \begin{gather*}\tag{\textbf{30}}
+    \end{gather*}
+    \begin{center}
+    As stated in this section, the separation of equation (2) on page 42 requires division by p(y), and this may disguise the fact that the roots of the equation p(y) = 0 are actually constant solutions to the differential equation. 
+    \end{center}
+    \begin{gather*}\tag{a}
+        \frac{dy}{dx} = (x-3)(y+1)^\frac{2}{3}\\\\
+        dx[x-3] = dy\left[\frac{1}{(y+1)^\frac{2}{3}}\right]\\
+        \int (x-3)dx = \int \frac{1}{(y+1)^\frac{2}{3}}dy\\
+        \frac{x^2}{2}-3x=3(y+1)^\frac{1}{3}\\
+        \frac{x^2}{6}-x+C = (y+1)^\frac{1}{3} \\
+        (y+1) = \left(\frac{x^2}{6}-x+C\right)^3\\
+        y = -1+\left(\frac{x^2}{6}-x+C\right)^3\\\\ \tag{b}
+        \frac{dy}{dx} = (x-3)(y+1)^\frac{2}{3}\\
+        0 = (x-3)(-1+1)\\
+        0 = 0 \\
+    \end{gather*}
+\section*{Chapter 2.3}
+    \begin{gather*}\tag{\textbf{17}}
+        \frac{dy}{dx}-\frac{y}{x}=xe^x;\hspace{.5cm}y(1) = e-1\\\\
+        \mu(x)=e^{\int-\frac{1}{x}dx}\\
+        \mu(x)=e^{-ln|x|}\\
+        \mu(x) = \frac{1}{x}\\
+        \mu(x) \frac{dy}{dx} - \mu(x) \frac{y}{x} = \mu(x)xe^x\\
+        \frac{1}{x}\frac{dy}{dx} -\frac{1}{x}\frac{y}{x}=\frac{1}{x}xe^x\\
+        \frac{1}{x}\frac{dy}{dx}-\frac{1}{x^2}y=e^x\\
+        \int dx\left[\frac{1}{x}y\right]= \int e^x\\
+        \frac{y}{x} = e^x + C\\
+        y = e^x + Cx\\
+        (e-1) = e^{(1)}+C(1)\\
+        C = -1\\\\
+        y=xe^x - x\\
+    \end{gather*}
+\pagebreak\section*{Chapter 3.2}
+    \begin{gather*}
+        \tag{\textbf{8}}
+    \end{gather*}
+\begin{center}
+A tank initially contains $s_0$ lb of salt dissolved in 200 gal of water, where $s_0$ is some positive number. Starting at time t = 0, water containing 0.5 lb of salt per gallon enters the tank at a rate of 4 gal/min, and the well stirred solution leaves the tank at the same rate. Letting c(t) be the concentration of salt in the tank at time t, show that the limiting concentration-that is, $\lim_{t\to\infty}c(t)$-is 0.5lb/gal
+\end{center}
+\begin{gather*}
+    \left(4\frac{gal}{min}\right)\left(.5\frac{lb}{gal}\right) = 2\frac{lb}{min}\\
+    4\frac{gal}{min}\left[\frac{x(t)}{200}\frac{lb}{gal}\right]=\frac{x(t)}{50}\frac{lb}{min}\\\\
+    \frac{dx}{dt}= 2-\frac{x}{50}\\
+    \frac{dx}{dt}=\frac{100-x}{50}\\
+    \int \frac{dx}{100-x} = \int \frac{dt}{50}\\
+    -ln|100-x| = \frac{1}{50}t+C\\
+    100-x = e^{-\frac{1}{50}t-C}\\
+    x = -e^{-\frac{1}{50}t-C} + 100
+    0 = -e^{-\frac{1}{50}0-C} + 100\\\\
+    C = -ln|100-x|-\frac{1}{50}t\\
+    C = -ln[100-(0)]-\frac{1}{50}(0)\\
+    C = -ln[100]\\\\
+    x = -e^{-\frac{1}{50}t-(-ln|100|)} + 100\\
+    x = -e^{-\frac{1}{50}t} * e^{ln|100|}+100\\
+    x = -100e^{-\frac{1}{50}t}+100\\\\
+    \lim_{t\to\infty}x(t) = \lim_{t\to\infty}-100e^{-\frac{1}{50}t}+100\\
+    \lim_{t\to\infty}x(t) = 100\\
+    \frac{x(t)}{200} = \frac{100}{200}\\
+\end{gather*}
+\begin{center}
+    This shows us that the limiting concentration of salt in the tank is 1/2 or .5 $\frac{lb}{gal}$.
+\end{center}
+\newpage\section*{Chapter 4.1}
+\begin{gather*}\tag{\textbf{7}}
+    y''+2y'+4y=5sin3t, \hspace{.5cm} \Omega=3\\\\
+    y = Acos\Omega t + Bsin\Omega t\\
+    y = Acos3t + Bsin3t\\
+    y' = -3Asin3t + 3Bcos3t\\
+    y'' = -9Acos3t - 9Bsin3t\\\\
+    (-9Acos3t-9Bsin3t)+2(-3Asin3t+3Bcos3t)+4(Acos3t+Bsin3t) = 5sin3t\\
+    -9Acos3t-9Bsin3t-6Asin3t+6Bcos3t+4Acos3t+4Bsin3t=5sin3t\\
+    -5Acos3t-5Bsin3t-6Asin3t+6Bcos3t = 5sin3t\\
+    -5A+6B=0\\
+    -5B+6A = 5\\
+    A = -\frac{30}{61},\hspace{.5cm}
+    B = -\frac{25}{61}\\\\
+    y = \left(-\frac{30}{61}\right)cos3t+\left(-\frac{25}{61}\right)sin3t
+\end{gather*}
+\newpage\section*{Chapter 4.2}
+\begin{gather*}\tag{\textbf{20}}
+    y''-4y'+4y=0; \hspace{.5cm} y(1) = 1,\;y'(1)=1\\\\
+    r^2-4r+4=0\\
+    r = 2\\
+    y(t) = c_1e^{rt}+c_2te^{rt}\\
+    y(t) = c_1e^{2t}+c_2te^{2t}\\  
+    y'= 2c_1e^{2t}+2c_2te^{2t}+c_2e^{2t}\\
+    1 = c_1e^{2(1)}+c_2(1)e^{2(1)}\\
+    1=c_1e^2+c_2e^2\\
+    1 = 2c_1e^{2(1)}+2c_2(1)e^{2(1)}+c_2e^{2(1)}\\
+    1 = 2c_1e^2+2c_2e^2+c_2e^2\\
+    c_1 = \frac{2}{e^2},\;\;\;\;
+    c_2 = -\frac{1}{e^2}\\\\
+    y(t)=2e^{2t-2}-te^{2t-2}\\\\\\\\\\\\
+    \tag{\textbf{29}}
+    y_1(t)=te^{2t}, \hspace{.5cm} y_2(t) = e^{2t}\\\\
+    y'_1(t) = 2te^{2t} + e^{2t}\\
+    y'_2(t) = 2e^{2t}\\\\
+    W(y_1,y_2,)(t) = 
+    \begin{vmatrix}
+        y_1(t) & y_2(t)\\
+        y'(t) & y'_2(t)
+    \end{vmatrix}\\\\
+    W(y_1,y_2)(t) =
+    \begin{vmatrix}
+        te^{2t} & e^{2t}\\
+        2te^{2t}+e^{2t} & 2e^{2t}
+    \end{vmatrix}\\\\
+    W(y_1,y_2)(t) = ((te^{2t})(2e^{2t}))-((2te^{2t}+e^{2t})(e^{2t})\\
+    W(y_1,y_2)(t) = -e^{4t}\\
+    -e^{4t} \neq 0\\
+\end{gather*}
+\begin{center}
+The Wronskian of our functions $ y_1 $ and $ y_2 $  cannot equal zero therefore we can say they are linearly independent on the interval (0,1)\\
+\end{center}
+\newpage
+\section*{Chapter 4.3}
+\begin{gather*}\tag{\textbf{12}}
+    u''+7u = 0\\\\
+    r^2+7 = 0\\
+    r = i\sqrt{7}, \; -i\sqrt{7}\\
+    \alpha = 0, \hspace{.5cm} \beta = \sqrt{7}\\
+    u(t)=c_1e^{\alpha t}cos\beta t + c_2e^{\alpha t}sin\beta t\\\\
+    u(t) = c_1cos\sqrt{7}t+c_2sin\sqrt{7}t\\\\\\\\\\\\\\\\
+    \tag{\textbf{23}}
+    w'' - 4w' +2w = 0; \hspace{.5cm}
+    w(0) = 2, \hspace{.1cm} w'(0) = 1\\\\
+    r^2-4r+2=0\\
+    r = 2 + \sqrt{2},\hspace{.2cm} 2 -\sqrt{2}\\
+    w(t)=c_1e^{rt}+c_2e^{rt}\\
+    w(t) = c_1e^{(2+\sqrt{2})t}+c_2e^{(2-\sqrt{2})t}\\
+    w'(t) = (2+\sqrt{2})c_1e^{(2+\sqrt{2})t} + (2-\sqrt{2})c_2e^{(2-\sqrt{2})t}\\
+    0 = c_1e^{(2+\sqrt{2})(0)}+c_2e^{(2-\sqrt{2})(0)}\\
+    c_1+c_2 = 0\\
+    1 = (2+\sqrt{2})c_1e^{(2+\sqrt{2})0} + (2-\sqrt{2})c_2e^{(2-\sqrt{2})0}\\
+    1 = (2+\sqrt{2})c_1 + (2-\sqrt{2})c_2\\
+    c_1 = \frac{\sqrt{2}}{4}, \hspace{.2cm}c_2 = -\frac{2}{4}\\\\
+    w(t) = \frac{\sqrt{2}}{4}e^{(2+\sqrt{2})t}-\frac{\sqrt{2}}{4}e^{(2-\sqrt{2})t}\\
+\end{gather*}
+\end{document}
